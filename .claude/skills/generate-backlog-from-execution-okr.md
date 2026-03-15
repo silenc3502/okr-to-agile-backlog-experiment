@@ -1,9 +1,13 @@
-# Skill: Execution OKR Backlog Generator
+# Command: Generate Backlog From Execution OKR (Backlog Transform)
 
-## 목적
+Execution OKR을 입력하면
+Frontend / Backend / Data Analytics Backlog를 생성한다.
 
-Execution OKR을 입력받아
-Frontend / Backend Backlog Title을 생성한다.
+---
+
+# 사용 Skill
+
+Execution OKR Backlog Generator
 
 ---
 
@@ -19,47 +23,38 @@ Execution OKR Table
 
 ---
 
-# 생성 규칙
+# 출력
 
-Backlog 생성은 다음 절차를 따른다.
+### Frontend Backlog Titles
 
-1. Execution O에서 핵심 행동을 추출한다
-2. 행동을 Frontend / Backend 책임으로 분리한다
-3. K, R 지표를 이벤트 수집 행동으로 변환한다
-4. Actor + 행동 + 대상 구조로 Backlog Title을 생성한다
+**Behavior Backlog**
 
----
+- 추천 페이지가 트렌드 기반 콘텐츠를 노출한다
+- 애플리케이션이 콘텐츠 클릭 이벤트를 수집한다
+- 애플리케이션이 콘텐츠 전환 이벤트를 수집한다
 
-# Actor 규칙
+**UI Backlog**
 
-Frontend
-
-애플리케이션  
-추천 페이지  
-콘텐츠 페이지
-
-Backend
-
-백엔드 서버  
-API 서버  
-시스템
+- 추천 페이지가 트렌드 콘텐츠 영역을 표시한다
+- 콘텐츠 페이지가 전환 완료 상태를 표시한다
 
 ---
 
-# 출력 형식
+### Backend Backlog Titles
 
-Frontend Backlog Titles
+**Behavior Backlog**
 
-Behavior Backlog
+- 백엔드 서버가 실험 그룹을 할당한다
+- API 서버가 콘텐츠 제공 요청을 처리한다
+- 백엔드 서버가 이벤트를 저장한다
 
-- ...
+---
 
-UI Backlog
+### Data Analytics Backlog Titles
 
-- ...
+**Behavior Backlog**
 
-Backend Backlog Titles
-
-Behavior Backlog
-
-- ...
+- Analytics 시스템이 CTR, SR을 계산한다
+- Metric Engine이 EAI, LOI, MCI를 계산한다
+- Experiment Engine이 Control vs Treatment 통계적 유의성을 검정한다
+- Analytics 시스템이 초기 신호 감지 여부를 판정한다

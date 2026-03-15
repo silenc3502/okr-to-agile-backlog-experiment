@@ -3,7 +3,7 @@
 # OKR to Backlog Transformation Rules
 
 이 시스템은 Execution OKR을 기반으로
-Frontend / Backend Agile Backlog를 생성한다.
+Frontend / Backend / Data Analytics Agile Backlog를 생성한다.
 
 ---
 
@@ -11,19 +11,20 @@ Frontend / Backend Agile Backlog를 생성한다.
 
 Execution OKR은 다음 구조를 가진다.
 
-O = 실행 목표
-K = 관찰 지표
+O = 실행 목표  
+K = 관찰 지표  
 R = 측정 방식
 
-Execution OKR은 직접 구현 작업이 아니라
-"실험 전략" 또는 "행동 변화 목표"이다.
+Execution OKR은 직접 구현 작업이 아니라  
+"실험 전략" 또는 "행동 변화 목표"이며,  
+측정·분석·지표 계산 관련 행동도 포함된다.
 
 따라서 Backlog 생성 시 다음 변환 과정을 따른다.
 
-Execution OKR
-→ 핵심 행동 추출
-→ 시스템 책임 분리
-→ 이벤트 수집 변환
+Execution OKR  
+→ 핵심 행동 추출  
+→ 시스템 책임 분리  
+→ 이벤트 수집/분석 변환  
 → Actor 기반 Backlog 생성
 
 ---
@@ -32,9 +33,9 @@ Execution OKR
 
 Execution O에서 시스템이 수행해야 하는 행동을 추출한다.
 
-예
+**예시 Execution O 행동**
 
-트렌드 기반 콘텐츠 노출 전략 실험
+- 트렌드 기반 콘텐츠 노출 전략 실험
 
 추출 행동
 
@@ -50,35 +51,38 @@ Execution O에서 시스템이 수행해야 하는 행동을 추출한다.
 
 행동을 다음 시스템으로 분리한다.
 
-Backend 책임
+**Backend 책임**
 
 - 데이터 수집
 - 콘텐츠 그룹 분류
 - 실험 그룹 할당
 - 이벤트 저장
 
-Frontend 책임
+**Frontend 책임**
 
 - 콘텐츠 표시
 - 사용자 인터랙션 처리
 - 이벤트 트래킹
 
+**Data Analytics 책임**
+
+- 지표 계산 (CTR, SR, EAI, LOI, MCI, SHI 등)
+- 통계적 검정 및 실험 분석
+- 초기 신호 감지 및 시차 분석
+- 실험 그룹 비교 및 전략 평가
+
 ---
 
-# Step 3 이벤트 변환
+# Step 3 이벤트/지표 변환
 
-K 또는 R에 포함된 지표는
-항상 이벤트 수집을 의미한다.
+K 또는 R에 포함된 지표는  
+항상 이벤트 수집 또는 계산 행동으로 변환한다.
 
-예
+**예시 K/R 지표 변환**
 
-CTR
-SR
-LOI
-
-→ 클릭 이벤트
-→ 전환 이벤트
-→ 상태 이벤트
+- CTR → 클릭 이벤트
+- SR → 전환 이벤트
+- LOI → 상태 이벤트
 
 ---
 
@@ -86,32 +90,44 @@ LOI
 
 Backlog Title은 다음 구조를 따른다.
 
-Actor + 행동 + 대상
+**Backlog Title 구조**
+
+- Actor + 행동 + 대상
 
 Actor는 다음 중 하나여야 한다.
 
-Frontend
+**Frontend**
 
 - 애플리케이션
 - 추천 페이지
 - 콘텐츠 페이지
 
-Backend
+**Backend**
 
 - 백엔드 서버
 - API 서버
 - 시스템
 
+**Data Analytics**
+
+- Analytics 시스템
+- Metric Engine
+- Experiment Engine
+
 ---
 
 # Backlog Type
 
-Frontend
+**Frontend**
 
 - Behavior Backlog
 - UI Backlog
 
-Backend
+**Backend**
+
+- Behavior Backlog
+
+**Data Analytics**
 
 - Behavior Backlog
 
@@ -119,8 +135,9 @@ Backend
 
 # 최종 목표
 
-Execution OKR을 입력하면
+Execution OKR을 입력하면  
 다음 결과를 생성한다.
 
-Frontend Backlog Titles
-Backend Backlog Titles
+- Frontend Backlog Titles
+- Backend Backlog Titles
+- Data Analytics Backlog Titles
